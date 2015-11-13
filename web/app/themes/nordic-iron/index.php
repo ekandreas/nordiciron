@@ -71,10 +71,7 @@
         <img src="<?=get_stylesheet_directory_uri()?>/assets/img/header.jpg">
     </div>
     <div class="motto">
-        <div>Slogan</div>
-        <div class="border no-right-border">As</div><div class="border">it</div>
-        <div>Goes</div>  
-        <label class="pro square">Now!</label>
+        <div>Perfect formed metal</div>
     </div>
     <h3 class="text-white">Developer Tutorial</h3>
 </div>
