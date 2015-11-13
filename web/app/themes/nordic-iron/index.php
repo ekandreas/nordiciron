@@ -58,7 +58,7 @@
     <div class="collapse navbar-collapse">
       <ul  class="nav navbar-nav navbar-right">
             <li>
-                <a target="_blank" href="#" id="issueButton" class="btn btn-simple btn-neutral">Get in touch?</a>
+            	<?php do_action('wpml_add_language_selector'); ?>
             </li>
        </ul>
       
