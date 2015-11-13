@@ -38,7 +38,6 @@ task( 'deploy', [
     'deploy:shared',
     'deploy:symlink',
     'cleanup',
-    'deploy:codefix',
     'deploy:restart',
     'success'
 ] )->desc( 'Deploy your Bedrock project, eg dep deploy production' );
