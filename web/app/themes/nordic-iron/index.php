@@ -122,14 +122,14 @@
 </footer>
 
 </body>
-<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-<script src="bootstrap3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?=get_stylesheet_directory_uri()?>/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="<?=get_stylesheet_directory_uri()?>/assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+<script src="<?=get_stylesheet_directory_uri()?>/bootstrap3/js/bootstrap.min.js" type="text/javascript"></script>
 
 <!--  Plugins -->
 
-<script src="assets/js/get-shit-done.js"></script>
-<script src="assets/js/demo.js"></script>
+<script src="<?=get_stylesheet_directory_uri()?>/assets/js/get-shit-done.js"></script>
+<script src="<?=get_stylesheet_directory_uri()?>/assets/js/demo.js"></script>
 <script>
     var transparent = true;
     var header_height;
