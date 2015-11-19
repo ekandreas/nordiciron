@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7f3ff54085787f44c4d1b5545c39fffb",
-    "content-hash": "ffe67db13da0e689f531cd4aa52bf03e",
+    "hash": "23af1d8045e297242f20e984f28c20f8",
+    "content-hash": "4bd78e6c0c5b0226a67f871d1a18c959",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -3676,6 +3676,26 @@
                 "wordpress"
             ],
             "time": "2015-11-12 10:11:45"
+        },
+        {
+            "name": "wpackagist-plugin/enhanced-media-library",
+            "version": "2.0.4.8",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/enhanced-media-library/",
+                "reference": "tags/2.0.4.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/enhanced-media-library.2.0.4.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/enhanced-media-library/"
         },
         {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
