@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "23af1d8045e297242f20e984f28c20f8",
-    "content-hash": "4bd78e6c0c5b0226a67f871d1a18c959",
+    "hash": "021a4906a34993615d781330d948829c",
+    "content-hash": "bc3a076a640ef3fcc92960c361771c2b",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -3678,26 +3678,6 @@
             "time": "2015-11-12 10:11:45"
         },
         {
-            "name": "wpackagist-plugin/enhanced-media-library",
-            "version": "2.0.4.8",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/enhanced-media-library/",
-                "reference": "tags/2.0.4.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enhanced-media-library.2.0.4.8.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/enhanced-media-library/"
-        },
-        {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
             "version": "4.8.3",
             "source": {
@@ -3776,6 +3756,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-media-library-categories",
+            "version": "1.5.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-media-library-categories/",
+                "reference": "tags/1.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-media-library-categories.1.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-media-library-categories/"
         }
     ],
     "packages-dev": [],
