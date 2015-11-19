@@ -46,7 +46,8 @@
     "wpackagist-plugin/wordpress-seo": "^2.3",
     "wpackagist-plugin/google-analytics-dashboard-for-wp": "^4.8",
     "wpackagist-plugin/varnish-http-purge": "^3.7",
-    "wpackagist-plugin/wp-media-library-categories":"*"
+    "wpackagist-plugin/wp-media-library-categories":"*",
+    "wpackagist-plugin/admin-menu-editor":"*"
   },
   "extra": {
     "installer-paths": {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "021a4906a34993615d781330d948829c",
-    "content-hash": "bc3a076a640ef3fcc92960c361771c2b",
+    "hash": "a51244180850dde4d7eefa9ebe50f4a0",
+    "content-hash": "d38f59242feadfd92d608e95d857bf1e",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -3676,6 +3676,26 @@
                 "wordpress"
             ],
             "time": "2015-11-12 10:11:45"
+        },
+        {
+            "name": "wpackagist-plugin/admin-menu-editor",
+            "version": "1.4.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/admin-menu-editor/",
+                "reference": "tags/1.4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/admin-menu-editor.1.4.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/admin-menu-editor/"
         },
         {
             "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
