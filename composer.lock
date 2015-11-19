@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16c480c080408646e6b612a83e773467",
-    "content-hash": "19a39ae2eb9507c3f54550b8aa898373",
+    "hash": "b521d9a9e5267c36b7337c2dffacb833",
+    "content-hash": "597a28e48ab0bc8185cfc687fd8c0e68",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -728,6 +728,79 @@
                 "version"
             ],
             "time": "2014-05-27 05:29:25"
+        },
+        {
+            "name": "johnbillion/extended-cpts",
+            "version": "2.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-cpts.git",
+                "reference": "1ef2dc18281543accfc9fbd88a65abf576f0adb2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/1ef2dc18281543accfc9fbd88a65abf576f0adb2",
+                "reference": "1ef2dc18281543accfc9fbd88a65abf576f0adb2",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.7",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "suggest": {
+                "johnbillion/extended-taxos": "Extended Taxonomies",
+                "wpackagist-plugin/rewrite-testing": "Rewrite Rule Testing"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom post types, allowing developers to quickly build custom post types without having to write the same code again and again.",
+            "homepage": "https://github.com/johnbillion/extended-cpts/",
+            "time": "2015-11-02 00:42:14"
+        },
+        {
+            "name": "johnbillion/extended-taxos",
+            "version": "1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-taxos.git",
+                "reference": "058bb78ae349fe11c9a319c99cf828abbb9bd699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-taxos/zipball/058bb78ae349fe11c9a319c99cf828abbb9bd699",
+                "reference": "058bb78ae349fe11c9a319c99cf828abbb9bd699",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom taxonomies, allowing you to quickly build custom taxonomies without having to write the same code again and again.",
+            "homepage": "https://github.com/johnbillion/extended-taxos/",
+            "time": "2015-11-02 00:36:14"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -3605,6 +3678,26 @@
             "time": "2015-11-12 10:11:45"
         },
         {
+            "name": "wpackagist-plugin/google-analytics-dashboard-for-wp",
+            "version": "4.8.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/google-analytics-dashboard-for-wp/",
+                "reference": "tags/4.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.4.8.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-analytics-dashboard-for-wp/"
+        },
+        {
             "name": "wpackagist-plugin/google-apps-login",
             "version": "2.8.12",
             "source": {
@@ -3623,6 +3716,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-apps-login/"
+        },
+        {
+            "name": "wpackagist-plugin/varnish-http-purge",
+            "version": "3.7.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/varnish-http-purge/",
+                "reference": "tags/3.7.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/varnish-http-purge.3.7.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/varnish-http-purge/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "2.3.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/2.3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         }
     ],
     "packages-dev": [],

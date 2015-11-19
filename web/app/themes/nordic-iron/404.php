@@ -8,24 +8,18 @@
 
             <div class="row tim-row">
                 
-            <?php
-
-            if( have_posts() ) {
-            ?>
-                <h1 class="text-center"><?php the_title() ?></h1>
+                <h1 class="text-center">404</h1>
                 <legend></legend>
                 <div class="col-md-8 col-md-offset-2">
                     <p>
-                        <?php the_content() ?>
+                        Page not found!
                     </p>
                 </div>
-              
-            <?php
-            }
-            ?>
 
             </div>
-        
+
+            <?php get_template_part('templates/parts/all_cat_buttons'); ?>
+
         </div>
 
     </div>

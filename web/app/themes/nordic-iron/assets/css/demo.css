@@ -34,7 +34,8 @@
     width: 260px;
 }
 .tim-row{
-    padding-top: 50px;
+    padding-top: 110px;
+    padding-bottom: 30px;
 }
 .tim-row h3{
     margin-top: 0;
@@ -42,6 +43,12 @@
 .switch{
     margin-right: 20px;
 }
+
+.navbar {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
 #navbar-full .navbar{
     border-radius: 0 !important;
     margin-bottom: 0;

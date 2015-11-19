@@ -40,7 +40,12 @@
     "wp-papi/papi": "^2.4",
     "frozzare/digster": "^1.5",
     "wpackagist-plugin/google-apps-login": "^2.8",
-    "deployer/deployer": "^3.0"
+    "deployer/deployer": "^3.0",
+    "johnbillion/extended-cpts": "^2.5",
+    "johnbillion/extended-taxos": "^1.6",
+    "wpackagist-plugin/wordpress-seo": "^2.3",
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "^4.8",
+    "wpackagist-plugin/varnish-http-purge": "^3.7"
   },
   "extra": {
     "installer-paths": {
