@@ -7,7 +7,7 @@ class Cpt
     {
         add_action( 'init', function () {
 
-            register_extended_post_type( 'products', [
+            \register_extended_post_type( 'products', [
                 'has_archive' => false,
                 'show_ui' => true,
                 'show_in_menu' => true,
