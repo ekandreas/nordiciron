@@ -7,10 +7,13 @@
         <div class="container">
 
             <div class="row tim-row">
-            	<img src="<?= papi_get_field('image')->url ?>" alt="product image" class="img-thumbnail img-responsive" />
+
+                <?php get_template_part('templates/parts/page-image'); ?>
+
                 <h1 class="text-center"><?php the_title() ?></h1>
                 <legend></legend>
                 <div class="col-md-8 col-md-offset-2">
+                
                     <p>
                         <?php the_content() ?>
                     </p>

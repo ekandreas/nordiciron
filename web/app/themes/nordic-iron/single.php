@@ -7,20 +7,15 @@
         <div class="container">
 
             <div class="row tim-row">
-            	<img src="<?= papi_get_field('image')->url ?>" alt="product image" class="img-thumbnail img-responsive" />
+
+                <?php get_template_part('templates/parts/page-image'); ?>
+
                 <h1 class="text-center"><?php the_title() ?></h1>
                 <legend></legend>
                 <div class="col-md-8 col-md-offset-2">
-                    <p>
-                    <?php 
-                    $categories = get_the_category();
-                    if( $categories ) {
-                        foreach ($categories as $key => $category) {
-                            echo '<a class="btn btn-info btn-fill" href="/category/' . $category->slug . '">' . $category->name . '</a>&nbsp;';
-                        }
-                    }
-                    ?>
-                    </p>
+
+                    <?php get_template_part('templates/parts/page-category-buttons'); ?>
+
                     <p>
                         <?php the_content() ?>
                     </p>
