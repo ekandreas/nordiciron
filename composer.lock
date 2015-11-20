@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a51244180850dde4d7eefa9ebe50f4a0",
-    "content-hash": "d38f59242feadfd92d608e95d857bf1e",
+    "hash": "9ffc1e1cf4a298a9dcc4e58b2085f785",
+    "content-hash": "5d5bf465524ff314b8a3d30df44bf7a7",
     "packages": [
         {
             "name": "asm89/twig-cache-extension",
@@ -3759,15 +3759,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.3.5",
+            "version": "3.0.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.3.5"
+                "reference": "tags/3.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
