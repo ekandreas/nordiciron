@@ -17,8 +17,8 @@ class Cpt
                     'taxonomies' => ['category'], 
                     'rewrite' => true,
                 ], [
-                    'singular' => 'Product',
-                    'plural'   => 'Products',
+                    'singular' => 'Produkt',
+                    'plural'   => 'produkter',
                 ] );
             }
 
