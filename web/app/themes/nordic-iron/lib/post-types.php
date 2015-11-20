@@ -18,7 +18,7 @@ class Cpt
                     'rewrite' => true,
                 ], [
                     'singular' => 'Produkt',
-                    'plural'   => 'produkter',
+                    'plural'   => 'Produkter',
                 ] );
             }
 
