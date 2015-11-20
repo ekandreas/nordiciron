@@ -1,8 +1,12 @@
+<?php
+    $image_field = papi_get_field('image');
+?>
+
 <div class="col-md-4">
     <a href="<?php the_permalink(); ?>">
     <div class="card">
         <div class="image" style="background-image: url(<?=papi_get_field('image')->url?>); background-size: cover; background-position: 50% 50%;">
-            <img src="<?=papi_get_field('image')->url?>" alt="..." style="display: none;">
+            <img src="<?= $image_field->sizes['medium']['url'] ?>" alt="..." style="display: none;">
             <div class="filter">
                 <button type="button" class="btn btn-neutral btn-simple">
                     <i class="fa fa-align-left"></i> <?php the_title() ?>

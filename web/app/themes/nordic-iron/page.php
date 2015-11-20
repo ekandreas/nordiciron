@@ -1,5 +1,6 @@
 <?php 
     get_template_part( 'templates/parts/head' );
+    if( $post ) setup_postdata( $post );
 ?>
 
 <div class="main">

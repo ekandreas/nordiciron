@@ -1,5 +1,7 @@
 <?php 
     get_template_part( 'templates/parts/head' );
+
+    if( $post ) setup_postdata( $post );
 ?>
 
 <div class="parallax">
@@ -29,28 +31,26 @@
 
             <div class="row">
 
-            <?php
+                <?php
 
-                $the_query = new WP_Query( [
-                    'post_type' => 'products',
-                ] );
+                $products = papi_get_field('products');
 
-                if ( $the_query->have_posts() ) {
-                    while ( $the_query->have_posts() ) { 
-                        $the_query->the_post();
+                if( $products ) {
+                    foreach ($products as $key => $product) {
+                        $post = get_post( $product->ID );
+                        setup_postdata( $post );
                         get_template_part('templates/parts/product-card');
                     }
-                } else {
                 }
                 wp_reset_postdata();
 
 
-            ?>                
+                ?>                
 
             </div>
         
         </div>
-<!-- end container -->
+
     </div>
 </div>
 
