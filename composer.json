@@ -30,13 +30,28 @@
     {
       "type": "composer",
       "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress/wordpress",
+        "version": "4.3.1",
+        "type": "webroot",
+        "dist": {
+          "type": "zip",
+          "url": "https://sv.wordpress.org/wordpress-4.3.1-sv_SE.zip"
+        },
+        "require" : {
+          "fancyguy/webroot-installer": "1.1.0"
+        }
+      }
     }
   ],
   "require": {
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.3.1",
+    "wordpress/wordpress": "4.3.1",
     "wp-papi/papi": "*",
     "frozzare/digster": "*",
     "wpackagist-plugin/google-apps-login": "*",
@@ -51,10 +66,11 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "webroot-dir": "web/wp",
+    "webroot-package": "wordpress/wordpress"
   }
 }
