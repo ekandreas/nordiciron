@@ -1,4 +1,3 @@
-
 <?php
 
 include_once 'lib/post-types.php';
