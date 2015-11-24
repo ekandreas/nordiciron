@@ -39,12 +39,6 @@
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button id="menu-toggle" type="button" class="navbar-toggle">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar bar1"></span>
-        <span class="icon-bar bar2"></span>
-        <span class="icon-bar bar3"></span>
-      </button>
       <a href="/">
            <div class="logo-container">
                 <div class="logos">
@@ -54,8 +48,29 @@
       </a>
     </div>
 
+<?php
+
+  $pages = papi_get_option('top_pages');
+  if( $pages ) {
+    ?>
+    <div class="top-pages">&nbsp;&nbsp;
+    <?php
+    foreach ($pages as $key => $page) {
+      $page = $page['page'];
+      ?>
+      <a href="<?=get_permalink($page->ID)?>" class="btn"><?=$page->post_title?></a>
+      <?php
+    }
+    ?>
+    </div>
+    <?php
+  }
+
+?>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
+
       <ul  class="nav navbar-nav navbar-right">
             <li>
               <?php do_action('wpml_add_language_selector'); ?>

@@ -2297,12 +2297,13 @@ fieldset[disabled] .form-control {
 .footer .social-area > a:not(.btn):focus {
   color: #777777;
 }
-.footer .copyright {
-  color: #777777;
+.footer .copyright p {
+  color: #fff !important;
   padding: 10px 15px;
   margin: 15px 3px;
   line-height: 20px;
   text-align: center;
+  font-size: 30px;
 }
 .footer hr {
   border-color: #dddddd;
@@ -2327,8 +2328,8 @@ fieldset[disabled] .form-control {
 .footer-black,
 .footer-transparent,
 .subscribe-line-transparent {
-  background-color: rgba(30, 30, 30, 0.97);
-  color: #dddddd;
+  background-color: #000;
+  color: #ffffff;
 }
 .footer-black nav > ul a,
 .footer-transparent nav > ul a,
@@ -5029,7 +5030,7 @@ fieldset[disabled] .form-control {
 @media (max-width: 767px) {
   .navbar-transparent {
     padding-top: 15px;
-    background-color: rgba(0, 0, 0, 0.45);
+    /*background-color: rgba(0, 0, 0, 0.45);*/
   }
   body {
     position: relative;

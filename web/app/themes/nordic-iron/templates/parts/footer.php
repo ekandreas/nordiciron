@@ -1,24 +1,12 @@
 <footer class="footer footer-transparent">
-    <div class="container">
-    	<p>&nbsp;</p>
-        <nav class="pull-left">
-            <?php 
-            wp_nav_menu( 
-                [ 
-                    'theme_location' => 'footer-menu',
-                    'container' => null,
-                ] 
-            ); ?>
-        </nav>
-    	<p>&nbsp;</p>
-    	<p>&nbsp;</p>
-    	<p>&nbsp;</p>
-    </div>
-        <hr/>
+        <p>&nbsp;</p>
         <div class="copyright">
             <?= papi_get_option( 'footer_text' ); ?>
         </div>
-    	<p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
 </footer>
 
 <?php wp_footer(); ?>

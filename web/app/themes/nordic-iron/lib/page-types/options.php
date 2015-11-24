@@ -12,6 +12,25 @@ class Main_Option_Type extends Papi_Option_Type {
 
     public function register() {
 
+        $this->box( 'Top menu', [
+            papi_property( [
+                'slug'  => 'top_pages',
+                'title' => 'Top Pages',
+                'type'  => 'repeater',
+                'settings' => [
+                'items' => [
+                  [
+                    'slug' => 'page',
+                    'type' => 'post',
+                    'settings' => [
+                        'post_type' => 'page',
+                    ]
+                  ]
+                ] 
+                ]
+            ] ),
+        ] );
+
         $this->box( 'Categories', [
             papi_property( [
                 'slug'  => 'public_categories',

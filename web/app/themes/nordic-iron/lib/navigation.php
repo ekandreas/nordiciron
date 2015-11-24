@@ -8,7 +8,7 @@ class Navigation
     {
 
 		add_action( 'init', function() {
-			register_nav_menu( 'footer-menu', __( 'Footer Menu' ));
+			//register_nav_menu( 'footer-menu', __( 'Footer Menu' ));
 		} );
 
     }

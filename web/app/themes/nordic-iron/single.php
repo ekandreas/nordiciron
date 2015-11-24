@@ -8,6 +8,9 @@
     <div class="section">
         <div class="container">
 
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        
             <div class="row tim-row">
 
                 <?php get_template_part('templates/parts/page-image'); ?>
