@@ -2,9 +2,10 @@
 date_default_timezone_set('Europe/Stockholm');
 
 include_once 'vendor/deployer/deployer/recipe/common.php';
+include_once 'pull.php';
 
 server( 'development', 'nordiciron.dev', 22 )
-    ->env('deploy_path','/var/www/nordiciron')
+    ->env('deploy_path','/home/vagrant/www/nordiciron')
     ->env('branch', 'master')
     ->stage('development')
     ->user( 'vagrant', 'vagrant' );
