@@ -16,7 +16,7 @@
       <?php 
       $categories = get_the_category();
       if( $categories ) {
-          echo $categories[0]->name . ' ';
+          //echo $categories[0]->name . ' ';
       }
       ?>
       </p>
