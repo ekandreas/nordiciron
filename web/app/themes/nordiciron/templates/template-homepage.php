@@ -25,15 +25,7 @@ get_header(); ?>
 		<div class="hero-copy">
 
 		<?php
-
-		$categories = get_categories( null );
-		foreach ($categories as $key => $category) {
-			if( $category->name == 'CadBank' ) continue;
-			?>
-			<button onclick="document.location='/produkter/<?=$category->slug?>';"><?=$category->name?></button>&nbsp;
-			<?php
-		}
-
+			echo do_shortcode('[produkter]');
 		?>
 
 			<?=papi_get_field('hero_content') ?>	

@@ -7,6 +7,19 @@
  * @package nordiciron
  */
 
+function category_shortcode() {
+	$result = '';
+	$categories = get_categories( null );
+	foreach ($categories as $key => $category) {
+		if( $category->name == 'CadBank' ) continue;
+		$result .= "<button style='margin-bottom:10px;' onclick='document.location=\"/produkter/" . $category->slug . "\";'>" . $category->name . "</button>&nbsp;";
+	}	
+	return $result;
+}
+add_shortcode( 'produkter', 'category_shortcode' );
+
+add_filter('widget_text', 'do_shortcode');
+
 function get_post_excerpt( $post_or_post_id=null, $length = 100 )
 {
 
