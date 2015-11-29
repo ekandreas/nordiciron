@@ -1,8 +1,8 @@
-## Hooch - A Bourbon, Neat, Bitters, and Refills WordPress theme.
+## nordiciron - A Bourbon, Neat, Bitters, and Refills WordPress theme.
 
-[Demo](http://braginteractive.com/demo/hooch/)
+[Demo](http://braginteractive.com/demo/nordiciron/)
 
-Read more about Hooch and some of its features [here](http://braginteractive.com/a-bourbon-neat-bitters-and-refills-wordpress-theme/)
+Read more about nordiciron and some of its features [here](http://braginteractive.com/a-bourbon-neat-bitters-and-refills-wordpress-theme/)
 
 ### Features
 - Refills navigation
@@ -14,7 +14,7 @@ Read more about Hooch and some of its features [here](http://braginteractive.com
 
 
 #### For the Nerds
-For customization, basic knowledge of the command line and the following dependencies are required to use Hooch:
+For customization, basic knowledge of the command line and the following dependencies are required to use nordiciron:
 
 - Bourbon ([http://bourbon.io/](http://bourbon.io/)) 
 - Node ([http://nodejs.org/](http://nodejs.org/)) -`npm install`
@@ -22,7 +22,7 @@ For customization, basic knowledge of the command line and the following depende
 - Bower ([http://bower.io/](http://bower.io/)) -`npm install -g bower`
 
 #### Usage
-After you've downloaded Hooch, and run `npm install` and `gulp` from the command line you can start using gulp.
+After you've downloaded nordiciron, and run `npm install` and `gulp` from the command line you can start using gulp.
 
 #### Gulp
 

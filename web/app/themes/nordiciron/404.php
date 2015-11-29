@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 get_header(); ?>
@@ -15,11 +15,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'hooch' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404', 'nordiciron' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'hooch' ); ?></p>
+					<p><?php esc_html_e( 'Ledsen men vi hittar inte sidan du försöker nå. Vill du testa att söka efter den?', 'nordiciron' ); ?></p>
 
 					<?php get_search_form(); ?>
 

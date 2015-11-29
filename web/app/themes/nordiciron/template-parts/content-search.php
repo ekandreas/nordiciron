@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 ?>
@@ -15,11 +15,15 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php hooch_posted_on(); ?>
+			<?php nordiciron_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
+    <?php if( $image_field = papi_get_field('image')  ) { ?>
+        <img src="<?= $image_field->url ?>" alt="product image" class="img-thumbnail img-responsive" />
+    <?php } ?>
+                
 	<div class="entry-summary">
 		<?php the_content(); ?>
 	</div><!-- .entry-summary -->

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 ?>
@@ -19,7 +19,7 @@
 			<?php if(get_theme_mod('site_logo')) {
 				echo '<img src="'. get_theme_mod('site_logo') . '" alt="'.get_bloginfo( 'name' ).'">';
 			} else { ?>
-			<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+			<img src="<?php bloginfo('template_url'); ?>/images/nordiciron.png" alt="<?php bloginfo( 'name' ); ?>">
 			<?php } ?>
 		
 	  </div>

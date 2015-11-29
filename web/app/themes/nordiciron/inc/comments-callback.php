@@ -3,7 +3,7 @@
  * Template for comments and pingbacks.
  *
  * To override this walker in a child theme without modifying the comments
- * template simply create your own hooch_comment(), and that function
+ * template simply create your own nordiciron_comment(), and that function
  * will be used instead.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
@@ -11,8 +11,8 @@
  * @package WordPress
  */
 
-if ( ! function_exists( 'hooch_comment' ) ) :
-function hooch_comment( $comment, $args, $depth ) {
+if ( ! function_exists( 'nordiciron_comment' ) ) :
+function nordiciron_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
@@ -20,7 +20,7 @@ function hooch_comment( $comment, $args, $depth ) {
 		// Display trackbacks differently than normal comments.
 	?>
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-		<p><?php _e( 'Pingback:', 'hooch' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'hooch' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'nordiciron' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'nordiciron' ), '<span class="ping-meta"><span class="edit-link">', '</span></span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -43,14 +43,14 @@ function hooch_comment( $comment, $args, $depth ) {
                         printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
                             esc_url( get_comment_link( $comment->comment_ID ) ),
                             get_comment_time( 'c' ),
-                            sprintf( _x( '%1$s at %2$s', '1: date, 2: time', 'hooch' ), get_comment_date(), get_comment_time() )
+                            sprintf( _x( '%1$s at %2$s', '1: date, 2: time', 'nordiciron' ), get_comment_date(), get_comment_time() )
                         );
-                        edit_comment_link( __( 'Edit', 'hooch' ), ' <span class="edit-link">', '<span>' ); ?>
+                        edit_comment_link( __( 'Edit', 'nordiciron' ), ' <span class="edit-link">', '<span>' ); ?>
                     </div><!-- .comment-date -->
                 </header><!-- .comment-meta -->
     
                 <?php if ( '0' == $comment->comment_approved ) : ?>
-                    <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'hooch' ); ?></p>
+                    <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'nordiciron' ); ?></p>
                 <?php endif; ?>
     
                 <div class="comment-content">
@@ -58,7 +58,7 @@ function hooch_comment( $comment, $args, $depth ) {
                 </div><!-- .comment-content -->
     
                 <div class="reply">
-                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'reply to comment', 'hooch' ) . ' &rarr;', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+                    <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'reply to comment', 'nordiciron' ) . ' &rarr;', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
                 </div><!-- .reply -->
                 
             </div><!-- .comment-details -->

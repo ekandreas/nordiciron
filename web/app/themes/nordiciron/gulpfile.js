@@ -40,7 +40,7 @@ gulp.task('zip', function () {
    '!bower_components',
    '!node_modules',
   ], {base: "."})
-  .pipe(zip('hooch.zip'))
+  .pipe(zip('nordiciron.zip'))
   .pipe(gulp.dest('.'));
 });
 
@@ -88,9 +88,11 @@ options.sass = {
   //precision: 10,
   //imagePath: 'assets/img',
   includePaths: [
-    config.bowerDir + '/bourbon/app/assets/stylesheets',
+    config.bowerDir + '/bourbon/dist',
     config.bowerDir + '/neat/app/assets/stylesheets',
     config.bowerDir + '/bitters/app/assets/stylesheets',
+    config.bowerDir + '/wyrm/sass',
+    config.bowerDir + '/font-awesome/scss',
   ]
 };
 options.autoprefixer = {

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'hooch' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( esc_html__( 'Sökresultat för: %s', 'nordiciron' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php hooch_numeric_posts_nav(); ?>
+			<?php nordiciron_numeric_posts_nav(); ?>
 
 		<?php else : ?>
 

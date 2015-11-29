@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 ?><!DOCTYPE html>
@@ -14,6 +14,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="96x96" href="<?=get_stylesheet_directory_uri()?>/favicon.png">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -21,6 +22,18 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60162402-4', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 <div id="page" class="hfeed site">
 
 	<header class="navigation" role="banner">
@@ -30,7 +43,7 @@
 			<?php if(get_theme_mod('site_logo')) {
 				echo '<img src="'. get_theme_mod('site_logo') . '" alt="'.get_bloginfo( 'name' ).'">';
 			} else { ?>
-			<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+			<img src="<?php bloginfo('template_url'); ?>/images/nordiciron-small.png" alt="<?php bloginfo( 'name' ); ?>">
 			<?php } ?>
 		</a>
 				
@@ -53,7 +66,7 @@
 	    <div class="navigation-tools">
 	      <div class="search-bar">
 	      	<form method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-				<input type="search" class="field" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php _e( 'Search', 'hooch' ); ?>" />
+				<input type="search" class="field" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" id="s" placeholder="<?php _e( 'Sök', 'nordiciron' ); ?>" />
 				<button type="submit">
 	            <img src="<?php bloginfo('template_url'); ?>/images/search-icon.png" alt="Search Icon">
 	          </button>

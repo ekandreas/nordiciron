@@ -1,2 +1,2 @@
 // Menu Toggle
-//= include ../js/src/hooch-menu-toggle.js 
+//= include ../js/src/nordiciron-menu-toggle.js 

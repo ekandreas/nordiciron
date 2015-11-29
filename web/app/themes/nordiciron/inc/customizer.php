@@ -1,8 +1,8 @@
 <?php
 /**
- * Hooch Theme Customizer.
+ * nordiciron Theme Customizer.
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function hooch_customize_register( $wp_customize ) {
+function nordiciron_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -33,7 +33,7 @@ function hooch_customize_register( $wp_customize ) {
 			'default'			=> '',
 			'type'				=> 'theme_mod',
 			'capability'		=> 'edit_theme_options',
-			'sanitize_callback'	=> 'hooch_sanitize_image'
+			'sanitize_callback'	=> 'nordiciron_sanitize_image'
 		)
 	);
 
@@ -48,8 +48,8 @@ function hooch_customize_register( $wp_customize ) {
 			array(
 				'settings'		=> 'site_logo',
 				'section'		=> 'title_tagline',
-				'label'			=> __( 'Site Logo', 'hooch' ),
-				'description'	=> __( 'Select the image to be used for the site logo.', 'hooch' )
+				'label'			=> __( 'Site Logo', 'nordiciron' ),
+				'description'	=> __( 'Select the image to be used for the site logo.', 'nordiciron' )
 			)
 		)
 	);
@@ -62,11 +62,11 @@ function hooch_customize_register( $wp_customize ) {
 
 	$wp_customize->add_section(
 		// $id
-		'hooch_section_footer',
+		'nordiciron_section_footer',
 		// $args
 		array(
-			'title'			=> __( 'Footer Options', 'hooch' ),
-			'description'	=> __( 'Options for the Footer', 'hooch' )
+			'title'			=> __( 'Footer Options', 'nordiciron' ),
+			'description'	=> __( 'Options for the Footer', 'nordiciron' )
 		)
 	);
 
@@ -75,10 +75,10 @@ function hooch_customize_register( $wp_customize ) {
 		'footer_copyright_text',
 		// $args
 		array(
-			'default'			=> sprintf( __( 'Theme: %1$s by %2$s.', 'hooch' ), 'Hooch', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ),
+			'default'			=> sprintf( __( 'Theme: %1$s by %2$s.', 'nordiciron' ), 'nordiciron', '<a href="http://braginteractive.com" rel="designer">Brad Williams</a>' ),
 			'type'				=> 'theme_mod',
 			'capability'		=> 'edit_theme_options',
-			'sanitize_callback'	=> 'hooch_sanitize_html'
+			'sanitize_callback'	=> 'nordiciron_sanitize_html'
 		)
 	);
 
@@ -88,10 +88,10 @@ function hooch_customize_register( $wp_customize ) {
 		// $args
 		array(
 			'settings'		=> 'footer_copyright_text',
-			'section'		=> 'hooch_section_footer',
+			'section'		=> 'nordiciron_section_footer',
 			'type'			=> 'text',
-			'label'			=> __( 'Footer Copyright Text', 'hooch' ),
-			'description'	=> __( 'Copyright or other text to be displayed in the site footer. HTML allowed.', 'hooch' )
+			'label'			=> __( 'Footer Copyright Text', 'nordiciron' ),
+			'description'	=> __( 'Copyright or other text to be displayed in the site footer. HTML allowed.', 'nordiciron' )
 		)
 	);
 
@@ -101,7 +101,7 @@ function hooch_customize_register( $wp_customize ) {
 
 
 
-add_action( 'customize_register', 'hooch_customize_register' );
+add_action( 'customize_register', 'nordiciron_customize_register' );
 
 
 /**
@@ -123,7 +123,7 @@ add_action( 'customize_register', 'hooch_customize_register' );
  * @param bool $checked Whether the checkbox is checked.
  * @return bool Whether the checkbox is checked.
  */
-function hooch_sanitize_checkbox( $checked ) {
+function nordiciron_sanitize_checkbox( $checked ) {
 	// Boolean check.
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
@@ -145,7 +145,7 @@ function hooch_sanitize_checkbox( $checked ) {
  * @param string $css CSS to sanitize.
  * @return string Sanitized CSS.
  */
-function hooch_sanitize_css( $css ) {
+function nordiciron_sanitize_css( $css ) {
 	return wp_strip_all_tags( $css );
 }
 
@@ -165,7 +165,7 @@ function hooch_sanitize_css( $css ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return int|string Page ID if the page is published; otherwise, the setting default.
  */
-function hooch_sanitize_dropdown_pages( $page_id, $setting ) {
+function nordiciron_sanitize_dropdown_pages( $page_id, $setting ) {
 	// Ensure $input is an absolute integer.
 	$page_id = absint( $page_id );
 	
@@ -189,7 +189,7 @@ function hooch_sanitize_dropdown_pages( $page_id, $setting ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string The sanitized email if not null; otherwise, the setting default.
  */
-function hooch_sanitize_email( $email, $setting ) {
+function nordiciron_sanitize_email( $email, $setting ) {
 	// Sanitize $input as a hex value without the hash prefix.
 	$email = sanitize_email( $email );
 	
@@ -213,7 +213,7 @@ function hooch_sanitize_email( $email, $setting ) {
  * @param WP_Customize_Setting $setting   Setting instance.
  * @return string The sanitized hex color if not null; otherwise, the setting default.
  */
-function hooch_sanitize_hex_color( $hex_color, $setting ) {
+function nordiciron_sanitize_hex_color( $hex_color, $setting ) {
 	// Sanitize $input as a hex value without the hash prefix.
 	$hex_color = sanitize_hex_color( $hex_color );
 	
@@ -238,7 +238,7 @@ function hooch_sanitize_hex_color( $hex_color, $setting ) {
  * @param string $html HTML to sanitize.
  * @return string Sanitized HTML.
  */
-function hooch_sanitize_html( $html ) {
+function nordiciron_sanitize_html( $html ) {
 	return wp_filter_post_kses( $html );
 }
 
@@ -257,7 +257,7 @@ function hooch_sanitize_html( $html ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string The image filename if the extension is allowed; otherwise, the setting default.
  */
-function hooch_sanitize_image( $image, $setting ) {
+function nordiciron_sanitize_image( $image, $setting ) {
 
 	/*
 	 * Array of valid image file types.
@@ -297,7 +297,7 @@ function hooch_sanitize_image( $image, $setting ) {
  * @param string $nohtml The no-HTML content to sanitize.
  * @return string Sanitized no-HTML content.
  */
-function hooch_sanitize_nohtml( $nohtml ) {
+function nordiciron_sanitize_nohtml( $nohtml ) {
 	return wp_filter_nohtml_kses( $nohtml );
 }
 
@@ -319,7 +319,7 @@ function hooch_sanitize_nohtml( $nohtml ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return int Sanitized number; otherwise, the setting default.
  */
-function hooch_sanitize_number_absint( $number, $setting ) {
+function nordiciron_sanitize_number_absint( $number, $setting ) {
 	// Ensure $number is an absolute integer (whole number, zero or greater).
 	$number = absint( $number );
 	
@@ -343,7 +343,7 @@ function hooch_sanitize_number_absint( $number, $setting ) {
  * @return int|string The number, if it is zero or greater and falls within the defined range; otherwise,
  *                    the setting default.
  */
-function hooch_sanitize_number_range( $number, $setting ) {
+function nordiciron_sanitize_number_range( $number, $setting ) {
 	
 	// Ensure input is an absolute integer.
 	$number = absint( $number );
@@ -380,7 +380,7 @@ function hooch_sanitize_number_range( $number, $setting ) {
  * @param WP_Customize_Setting $setting Setting instance.
  * @return string Sanitized slug if it is a valid choice; otherwise, the setting default.
  */
-function hooch_sanitize_select( $input, $setting ) {
+function nordiciron_sanitize_select( $input, $setting ) {
 	
 	// Ensure input is a slug.
 	$input = sanitize_key( $input );
@@ -408,6 +408,6 @@ function hooch_sanitize_select( $input, $setting ) {
  * @param string $url URL to sanitize.
  * @return string Sanitized URL.
  */
-function hooch_sanitize_url( $url ) {
+function nordiciron_sanitize_url( $url ) {
 	return esc_url_raw( $url );
 }

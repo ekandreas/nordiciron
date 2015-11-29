@@ -3,7 +3,7 @@
  * Template Name: Homepage
  *
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 get_header(); ?>
@@ -18,15 +18,24 @@ get_header(); ?>
 <div class="hero" style="<?php echo $bg; ?>">
 	<div class="hero-inner">
     <div class="hero-logo">
-    	<?php if(get_field('hero_image')) {
-			echo '<img src="' . get_field('hero_image') . '" alt="">';
-		} else { ?>
-			<img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo( 'name' ); ?>">
-		<?php } ?>
-    	
+    	<p>&nbsp;</p>
+    	<p>&nbsp;</p>
+    	<p>&nbsp;</p>
 	</div>
 		<div class="hero-copy">
-			<?php the_field('hero_content') ?>	
+
+		<?php
+
+		$categories = get_categories( null );
+		foreach ($categories as $key => $category) {
+			?>
+			<button onclick="document.location='/produkter/<?=$category->slug?>';"><?=$category->name?></button>&nbsp;
+			<?php
+		}
+
+		?>
+
+			<?=papi_get_field('hero_content') ?>	
 		</div>
 	</div>
 </div>
@@ -37,54 +46,25 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php 
-                    // Checks to see if the bullet color values are set
-					$color1 = (get_field('bullet_1_color') ? 'background:' . get_field('bullet_1_color') . ';' : '');
-					$color2 = (get_field('bullet_2_color') ? 'background:' . get_field('bullet_2_color') . ';' : '');
-					$color3 = (get_field('bullet_3_color') ? 'background:' . get_field('bullet_3_color') . ';' : ''); 
-				?>
-
-				<ul class="bullets">
-				  <li class="bullet">
-				    <div class="bullet-icon bullet-icon-1" style="<?php echo $color1; ?>">
-				    	<?php if(get_field('bullet_1_image')) {
-							echo '<img src="' . get_field('bullet_1_image') . '" alt="">';
-						} else { ?>
-							<img src="<?php bloginfo('template_url'); ?>/images/bullet-1.png" alt="">
-						<?php } ?>
-				    </div>
-				    <div class="bullet-content">
-				      <?php the_field('bullet_1_content') ?>
-				  </div>
-				  </li>  
-				  <li class="bullet">
-				    <div class="bullet-icon bullet-icon-2" style="<?php echo $color2; ?>">
-				      <?php if(get_field('bullet_2_image')) {
-							echo '<img src="' . get_field('bullet_2_image') . '" alt="">';
-						} else { ?>
-							<img src="<?php bloginfo('template_url'); ?>/images/bullet-2.png" alt="">
-						<?php } ?>
-				    </div>
-				    <div class="bullet-content">
-				      <?php the_field('bullet_2_content') ?>
-				  </div>
-				  </li>
-				  <li class="bullet">
-				    <div class="bullet-icon bullet-icon-3" style="<?php echo $color3; ?>">
-				      <?php if(get_field('bullet_3_image')) {
-							echo '<img src="' . get_field('bullet_3_image') . '" alt="">';
-						} else { ?>
-							<img src="<?php bloginfo('template_url'); ?>/images/bullet-3.png" alt="">
-						<?php } ?>
-				    </div>
-				    <div class="bullet-content">
-				      <?php the_field('bullet_3_content') ?>
-				  </div>
-				  </li> 
-				</ul>
-
-
 				<?php get_template_part( 'template-parts/content', 'home' ); ?>
+
+                <?php
+                $products = papi_get_field('products');
+                if( $products ) {
+                	?>
+					<div class="cards">
+                	<?php
+                    foreach ($products as $key => $product) {
+                        $post = get_post( $product->ID );
+                        setup_postdata( $post );
+                        get_template_part('templates/parts/product-card');
+                    }
+                	?>
+					</div>
+                	<?php
+                }
+                wp_reset_postdata();
+                ?> 
 
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template.

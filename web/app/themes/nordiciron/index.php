@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Hooch
+ * @package nordiciron
  */
 
 get_header(); ?>
@@ -41,7 +41,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php hooch_numeric_posts_nav(); ?>
+			<?php nordiciron_numeric_posts_nav(); ?>
 
 		<?php else : ?>
 

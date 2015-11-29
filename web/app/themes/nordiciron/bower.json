@@ -1,5 +1,5 @@
 {
-  "name": "hooch",
+  "name": "nordiciron",
   "version": "1.0.0",
   "authors": [
     "Brad Williams <braginteractive@gmail.com>"
@@ -13,8 +13,12 @@
     "tests"
   ],
   "devDependencies": {
-    "bitters": "~1.0.0",
-    "bourbon": "~4.2.4",
-    "neat": "~1.7.2"
+    "bitters": "*",
+    "bourbon": "*",
+    "neat": "*",
+    "wyrm": "*"
+  },
+  "dependencies": {
+    "font-awesome": "~4.5.0"
   }
 }
