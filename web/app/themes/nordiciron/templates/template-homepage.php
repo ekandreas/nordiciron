@@ -28,6 +28,7 @@ get_header(); ?>
 
 		$categories = get_categories( null );
 		foreach ($categories as $key => $category) {
+			if( $category->name == 'CadBank' ) continue;
 			?>
 			<button onclick="document.location='/produkter/<?=$category->slug?>';"><?=$category->name?></button>&nbsp;
 			<?php
