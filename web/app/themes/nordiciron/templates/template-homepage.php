@@ -24,7 +24,9 @@ get_header(); ?>
 	</div>
 		<div class="hero-copy">
 
-			<?=papi_get_field('slogan') ?>	
+			<?php if( $slogan=papi_get_field('slogan') ) {
+				echo "<div style='margin: auto;align:center; max-width: 300px; opacity: 0.90; background-color: #eeeeee;'><h1 style='padding: 20px;color:#333333;'>" .  strtoupper($slogan) . "</h1></div>";
+			} ?>	
 
 			<?php echo do_shortcode('[produkter]');	?>
 
