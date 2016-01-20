@@ -3,7 +3,7 @@
  * Enqueue scripts and styles.
  */
 function nordiciron_scripts() {
-	wp_enqueue_style( 'nordiciron-style', get_template_directory_uri() . '/style.min.css' );
+	wp_enqueue_style( 'nordiciron-style', get_template_directory_uri() . '/style.css' );
 
 	wp_enqueue_script( 'nordiciron-js', get_template_directory_uri() . '/js/dist/scripts.min.js', array('jquery'), '1.0.0', true );
 

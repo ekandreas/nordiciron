@@ -1594,9 +1594,9 @@ object {
   /* line 35, /Users/andreas/proj/dev/www/nordiciron/web/app/themes/nordiciron/sass/components/_cards.scss */
   .card .card-image {
     overflow: hidden;
-    height: 150px;
-    max-height: 150px;
-    background-color: #F8F2B4; }
+    height: 250px;
+    max-height: 250px;
+    background-color: #f7f7f7; }
     /* line 41, /Users/andreas/proj/dev/www/nordiciron/web/app/themes/nordiciron/sass/components/_cards.scss */
     .card .card-image img {
       -webkit-transition: all 0.2s ease-in-out;
