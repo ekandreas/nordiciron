@@ -11,7 +11,7 @@ function category_shortcode() {
 	$result = '';
 	$categories = get_categories( null );
 	foreach ($categories as $key => $category) {
-		if( $category->name == 'CadBank' ) continue;
+		//if( $category->name == 'CadBank' ) continue;
 		$result .= "<button style='margin-bottom:10px;' onclick='document.location=\"/produkter/" . $category->slug . "\";'>" . $category->name . "</button>&nbsp;";
 	}	
 	return $result;

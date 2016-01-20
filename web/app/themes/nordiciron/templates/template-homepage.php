@@ -24,11 +24,10 @@ get_header(); ?>
 	</div>
 		<div class="hero-copy">
 
-		<?php
-			echo do_shortcode('[produkter]');
-		?>
+			<?=papi_get_field('slogan') ?>	
 
-			<?=papi_get_field('hero_content') ?>	
+			<?php echo do_shortcode('[produkter]');	?>
+
 		</div>
 	</div>
 </div>
