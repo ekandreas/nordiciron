@@ -20,7 +20,7 @@ add_shortcode( 'produkter', 'category_shortcode' );
 
 add_filter('widget_text', 'do_shortcode');
 
-function get_post_excerpt( $post_or_post_id=null, $length = 100 )
+function get_post_excerpt( $post_or_post_id=null, $length = 90 )
 {
 
     $post   = null;
@@ -49,7 +49,7 @@ function get_post_excerpt( $post_or_post_id=null, $length = 100 )
             $line=$match[0];
         }
 
-        $excerpt = $line . '... Läs mer!';
+        $excerpt = $line . '...<br/><div style="text-align:right"><strong>Läs mer!</strong></div>';
     }
     return wp_kses_post( $excerpt );
 }

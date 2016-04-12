@@ -29,17 +29,17 @@
   "repositories": [
     {
       "type": "composer",
-      "url": "http://wpackagist.org"
+      "url": "https://wpackagist.org"
     },
     {
       "type": "package",
       "package": {
         "name": "wordpress/wordpress",
-        "version": "4.4.1",
+        "version": "4.4.2",
         "type": "webroot",
         "dist": {
           "type": "zip",
-          "url": "https://sv.wordpress.org/wordpress-4.4.1-sv_SE.zip"
+          "url": "https://sv.wordpress.org/wordpress-4.4.2-sv_SE.zip"
         },
         "require" : {
           "fancyguy/webroot-installer": "1.1.0"
@@ -51,7 +51,7 @@
     "php": ">=5.5",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "^2.0.1",
-    "wordpress/wordpress": "4.4.1",
+    "wordpress/wordpress": "4.4.2",
     "wp-papi/papi": "*",
     "frozzare/digster": "*",
     "wpackagist-plugin/google-apps-login": "*",
@@ -72,5 +72,9 @@
     },
     "webroot-dir": "web/wp",
     "webroot-package": "wordpress/wordpress"
+  },
+  "require-dev": {
+    "ekandreas/docker-bedrock": "*",
+    "ekandreas/dipwpe": "*"
   }
 }

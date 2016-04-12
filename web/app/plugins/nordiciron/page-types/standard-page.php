@@ -3,7 +3,7 @@
 class News_Page_Type extends Papi_Page_Type
 {
 
-    public function page_type()
+    public function meta()
     {
         return [
             'post_type'   => 'page',
@@ -11,11 +11,13 @@ class News_Page_Type extends Papi_Page_Type
         ];
     }
 
-    public function register() {
-
-        $this->remove([
+    public function remove() {
+        return [
             'commentstatusdiv',
-        ]);
+        ];
+    }
+    
+    public function register() {
 
         $this->box( 'Page', [
             papi_property( [

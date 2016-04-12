@@ -1,19 +1,23 @@
 <?php
 date_default_timezone_set('Europe/Stockholm');
+include_once 'vendor/ekandreas/docker-bedrock/recipe.php';
+include_once 'vendor/ekandreas/dipwpe/pull.php';
 
-include_once 'vendor/deployer/deployer/recipe/common.php';
-include_once 'pull.php';
-
-server( 'development', 'nordiciron.dev', 22 )
-    ->env('deploy_path','/home/vagrant/www/nordiciron')
-    ->env('branch', 'master')
-    ->stage('development')
-    ->user( 'vagrant', 'vagrant' );
+server('nordiciron.dev', 'default')
+    ->env('container', 'bedrock')
+    ->stage('development');
 
 server( 'production', 'andreasek.se', 22 )
     ->env('deploy_path','/mnt/persist/www/nordiciron.com')
     ->user( 'root' )
     ->env('branch', 'master')
+    ->env('remote.name','nordiciron')
+    ->env('remote.database','nordiciron')
+    ->env('remote.ssh','root@aekab.se')
+    ->env('remote.domain','www.nordiciron.com')
+    ->env('local.domain','nordiciron.dev')
+    ->env('remote.path','/mnt/persist/www/nordiciron.com')
+    ->env('local.is_elastic',false)
     ->stage('production')
     ->identityFile();
 

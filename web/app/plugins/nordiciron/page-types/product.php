@@ -3,7 +3,7 @@
 class Product_Page_Type extends Papi_Page_Type
 {
 
-    public function page_type()
+    public function meta()
     {
         return [
             'post_type'   => 'products',

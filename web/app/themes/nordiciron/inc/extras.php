@@ -28,6 +28,11 @@ add_filter( 'body_class', 'nordiciron_body_classes' );
  */
 
 function modify_read_more_link() {
-	return '<a class="more-link" href="' . get_permalink() . '">'. __( 'Read More <span>&rsaquo;</span>', 'nordiciron' ). '</a>';
+	return '<br/><a class="more-link" href="' . get_permalink() . '">'. __( 'Läs mer <span>&rsaquo;</span>', 'nordiciron' ). '</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+function custom_excerpt_more( $more ) {
+	return '[.....]';
+}
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
